@@ -26,6 +26,7 @@ public class PersonService {
         Department dept = departmentRepository.getReferenceById(dto.getDepartment().getId());
 
         entity.setDepartment(dept);
+
         entity = repository.save(entity);
         return new PersonDepartmentDTO(entity);
     }
